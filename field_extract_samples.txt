@@ -1,0 +1,50 @@
+EXTRACT-syslog_subject_section_general = Microsoft\-Windows\-Security\-Auditing.*EventID\=(4611|4624|4625|4634|4647|4656|4657|4658|4659|4660|4661|4662|4663|4672|4673|4674|4688|4689|4696|4700|4701|4702|4715|4717|4718|4719|4720|4722|4723|4724|4725|4726|4738|4739|4740|4741|4742|4743|4767|4912|4985|5140)(.*|\n)Subject\:(\s+|\n)Security\sID\:\s+(?<security_id>.*?)(\s*|\n)Account\sName\:\s+(?<account_name>.*?)(\s+|\n)Account\sDomain\:\s+(?<account_domain>.*?)(\s+|\n)Logon\sID\:\s+(?<logon_id>.*?)(\s+|\n|\r)
+
+EXTRACT-syslog_subject_section_4648 = Microsoft\-Windows\-Security\-Auditing.*EventID\=4648(.*|\n)Subject\:(\s+|\n)Security\sID\:\s+(?<security_id>.+?)(\s+|\n)Account\sName\:\s+(?<account_name>.*?)(\s+|\n)Account\sDomain\:\s+(?<account_domain>.*?)(\s+|\n)Logon\sID\:\s+(?<logon_id>.*?)(\s+|\n)Logon\sGUID\:\s+(?<logon_guid>\S+)(\s+|\n)
+
+EXTRACT-syslog_subject_section_4778_4779 = Microsoft\-Windows\-Security\-Auditing.*EventID\=(4778|4779)(.*|\n)Subject\:(\s+|\n)Subject\:(\s+|\n)Security\sID\:\s+(?<security_id>.*?)(\s+|\n)Account\sName\:\s+(?<account_name>.*?)(\s+|\n)Logon\sID\:\s+(?<logon_id>.*?)(\s+|\n)
+
+EXTRACT-syslog_session_4778_4779 = Microsoft\-Windows\-Security\-Auditing.*EventID\=(4778|4779)(.*|\n)Session\:(\s+|\n)Session\sName\:\s+(?<session_name>\S+)(\s+|\n)
+
+EXTRACT-syslog_logon_process_name_4611 = Microsoft\-Windows\-Security\-Auditing.*EventID\=(4611)(.*|\n)Logon\sProcess\sName:\s+(?<logon_process_name>\S+)(\s+|\n)
+
+EXTRACT-syslog_additional_information_4778_4779 = Microsoft\-Windows\-Security\-Auditing.*EventID\=(4778|4779)(.*|\n)Additional\sInformation\:(\s+|\n)Client\sName\:\s+(?<client_name>\S+)(\s+|\n)Client\sAddress\:\s+(?<client_address>\S+)(\s+|\n)
+
+EXTRACT-syslog_additional_information_4740 = Microsoft\-Windows\-Security\-Auditing.*EventID\=(4740)(.*|\n)Additional\sInformation\:(\s+|\n)Caller\sComputer\sName\:\s+(?<caller_computer_name>\S+)(\s+|\n|)
+
+EXTRACT-syslog_process_information_4624_4648_4656_4658_4674_4696 = Microsoft\-Windows\-Security\-Auditing.*EventID\=(4624|4648|4656|4658|4674|4696)(?s:.*)Process\sID\:\s+(?<process_id>\S+)(\s+|\n|\r)Process\sName\:\s+(?<process_name>.*)(\s+|\n)(Network\sInformation\:|Access\sRequest\sInformation\:|Requested\sOperation\:|Target\sProcess\:)
+
+EXTRACT-syslog_new_logon_4624 = Microsoft\-Windows\-Security\-Auditing.*EventID\=4624(?s:.*)New\sLogon\:(\s+|\n)Security\sID\:\s+(?<new_security_id>.*?)(\s+|\n)Account\sName\:\s+(?<new_account_name>.*?)(\s+|\n)Account\sDomain\:\s+(?<new_account_domain>.*?)(\s+|\n)Logon\sID\:\s+(?<new_logon_id>.*?)(\s+|\n)Logon\sGUID\:\s+(?<new_logon_guid>\S+)(\s+|\n)
+
+EXTRACT-syslog_process_information_4625 = Microsoft\-Windows\-Security\-Auditing.*EventID\=(4625)(?s:.*)(.*|\n)Process\sInformation:(\s+|\n)Caller\sProcess\sID\:\s+(?<caller_process_id>\S+)(\s+|\n|\r)Caller\sProcess\sName\:\s+(?<caller_process_name>.*)(\s+|\n)(Network\sInformation\:)
+
+EXTRACT-syslog_process_information_4668_4688 = Microsoft\-Windows\-Security\-Auditing.*EventID\=(4668|4688)(?s:.*)(.*|\n)Process\sInformation:(\s+|\n)New\sProcess\sID\:\s+(?<new_process_id>\S+)(\s+|\n|\r)New\sProcess\sName\:\s+(?<new_process_name>.*)(\s+|\n)Token\sElevation\sType\:\s+(?<token_elevation_type>.*)(\s+|\n|\r)Creator\sProcess\sID\:\s+(?<creator_process_id>\S+)(\s+|\n|\r)(Creator\sProcess\sName\:\s+(?<creator_process_name>.*\.exe))?(\s+|\n|\r)Process\sCommand\sLine\:
+
+EXTRACT-syslog_process_information_4689 = Microsoft\-Windows\-Security\-Auditing.*EventID\=4689(?s:.*)Process\sInformation\:(\s+|\n)Process\sID\:\s+(?<process_id>\S+)(\s+|\n|\r)Process\sName\:\s+(?<process_name>.*)(\s+|\n)Exit\sStatus\:\s+(?<exit_status>\S+)(\s*|\n|\r)
+
+EXTRACT-syslog_network_information_4624_4625 = Microsoft\-Windows\-Security\-Auditing.*EventID\=(4624|4625)(?s:.*)Network\sInformation\:(\s+|\n)Workstation\sName\:\s+(?<workstation_name>\S+)(\s+|\n|\r)Source\sNetwork\sAddress\:\s+(?<source_network_address>.*)(\s+|\n)Source\sPort\:\s+(?<source_port>\S+)(\s*|\n|\r)
+
+EXTRACT-syslog_network_information_4768_4769_4770_4771_4772_4773 = Microsoft\-Windows\-Security\-Auditing.*EventID\=(4768|4769|4770|4771|4772|4773)(?s:.*)Network\sInformation\:(\s+|\n)Client\sAddress\:\s+(?<client_address>\S+)(\s+|\n|\r)Client\sPort\:\s+(?<client_port>\S+)(\s*|\n|\r)
+
+EXTRACT-syslog_network_information_4648 = Microsoft\-Windows\-Security\-Auditing.*EventID\=(4648)(?s:.*)Network\sInformation\:(\s+|\n)Network\sAddress\:\s+(?<network_address>\S+)(\s+|\n|\r)Port\:\s+(?<port>\S+)(\s*|\n|\r)
+
+EXTRACT-syslog_network_information_5145 = Microsoft\-Windows\-Security\-Auditing.*EventID\=(5145)(?s:.*)Network\sInformation\:(\s+|\n)Object\sType\:\s+(?<object_type>.*)(\s+|\n|\r)Source\sAddress\:\s+(?<source_address>\S+)(\s+|\n|\r)Source\sPort\:\s+(?<source_port>\S+)(\s*|\n|\r)
+
+EXTRACT-syslog_target_server_4648 = Microsoft\-Windows\-Security\-Auditing.*EventID\=(4648)(?s:.*)Target\sServer\:(\s+|\n)Target\sServer\sName\:\s+(?<target_server_name>.*)(\s+|\n|\r)Additional\sInformation\:\s+(?<additional_information>\S+)(\s*|\n|\r)
+
+EXTRACT-syslog_target_account_4722 = Microsoft\-Windows\-Security\-Auditing.*EventID\=(4722)(?s:.*)Target\sAccount\:(\s+|\n)Security\sID\:\s+(?<target_security_id>.+?)(\s+|\n)Account\sName\:\s+(?<target_account_name>.*?)(\s+|\n)Account\sDomain\:\s+(?<targetaccount_domain>.*?)(\s*|\n|\r)
+
+EXTRACT-syslog_account_whose_credentials_were_used_4648 = Microsoft\-Windows\-Security\-Auditing.*EventID\=4648(?s:.*)Account\sWhose\sCredentials\sWere\sUsed\:(\s+|\n)Account\sName\:\s+(?<used_account_name>.*?)(\s+|\n)Account\sDomain\:\s+(?<used_account_domain>.*?)(\s+|\n)Logon\sGUID\:\s+(?<used_logon_guid>\S+)(\s*|\n)
+
+EXTRACT-syslog_creator_subject_4668_4688 = Microsoft\-Windows\-Security\-Auditing.*EventID\=(4668|4688)(?s:.*)Creator\sSubject\:(\s+|\n)Security\sID\:\s+(?<creator_security_id>.*?)(\s+|\n)Account\sName\:\s+(?<creator_account_name>.*?)(\s+|\n)Account\sDomain\:\s+(?<creator_account_domain>.*?)(\s+|\n)Logon\sID\:\s+(?<creator_logon_id>\S+)(\s*|\n)
+
+EXTRACT-syslog_target_process_4668_4688 = Microsoft\-Windows\-Security\-Auditing.*EventID\=(4668|4688)(?s:.*)Target\sSubject\:(\s+|\n)Security\sID\:\s+(?<target_security_id>.*?)(\s+|\n)Account\sName\:\s+(?<target_account_name>.*?)(\s+|\n)Account\sDomain\:\s+(?<target_account_domain>.*?)(\s+|\n)Logon\sID\:\s+(?<target_logon_id>\S+)(\s*|\n)
+
+EXTRACT-syslog_target_process_4696 = Microsoft\-Windows\-Security\-Auditing.*EventID\=(4696)(?s:.*)(.*|\n)Target\sProcess\:(\s+|\n)Target\sProcess\sID\:\s+(?<target_process_id>\S+)(\s+|\n|\r)Target\sProcess\sName\:\s+(?<target_process_name>.*)(\s+|\n)(New\sToken\sInformation\:)
+
+EXTRACT-syslog_New_Token_Information_4696 = Microsoft\-Windows\-Security\-Auditing.*EventID\=(4696)(?s:.*)New\sToken\sInformation\:(\s+|\n)Security\sID\:\s+(?<newtoken_security_id>.*?)(\s+|\n)Account\sName\:\s+(?<newtoken_account_name>.*?)(\s+|\n)Account\sDomain\:\s+(?<newtoken_account_domain>.*?)(\s+|\n)Logon\sID\:\s+(?<newtoken_logon_id>\S+)(\s*|\n)
+
+EXTRACT-logon type = Logon Type\:\s+(?<LogonType>\d{1,2})
+
+EXTRACT-account_for_which_logon_failed_4625 = Microsoft\-Windows\-Security\-Auditing.*EventID\=4625(?s:.*)Account\sFor\sWhich\sLogon\sFailed\:(\s+|\n)Security\sID\:\s+(?<failed_security_id>.*?)(\s+|\n)Account\sName\:\s+(?<failed_account_name>.*?)(\s+|\n)Account\sDomain\:\s+(?<failed_account_domain>\S+)(\s+|\n)Failure\sInformation\:(\s+|\n)Failure\sReason\:\s+(?<failure_reason>.*?)(\s+|\n)Status\:\s+(?<failure_status>\S+)(\s+|\n)Sub\sStatus\:\s+(?<failure_sub_status>\S+)
+
