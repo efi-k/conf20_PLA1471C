@@ -1,10 +1,13 @@
 **LEEF:**
 Refer to the QRadar Log Event Extended Format (LEEF) Guide at https://www.ibm.com/support/knowledgecenter/SS42VS_DSM/b_Leef_format_guide.pdf for more information.
+
 https://www.ibm.com/support/knowledgecenter/en/SS42VS_7.3.3/com.ibm.qradar.doc/b_qradar_admin_guide.pdf
 (Adding forwarding destinations )
 
+
 **CEF:**
 https://community.microfocus.com/t5/ArcSight-Connectors/ArcSight-Common-Event-Format-CEF-Implementation-Standard/ta-p/1645557
+
 https://community.microfocus.com/t5/ArcSight-Connectors/ArcSight-Common-Event-Format-CEF-Implementation-Standard/ta-p/1645557?attachment-id=68077
 
 ForwardingCEFSyslogEvents
@@ -12,6 +15,7 @@ https://community.microfocus.com/t5/ESM-and-ESM-Express-Previous/ArcSight-Forwar
 
 **McAfee ESM CEF:**
 https://docs.mcafee.com/bundle/enterprise-security-manager-10.2.0-product-guide-unmanaged/page/GUID-984F5DA6-8D84-4549-855B-C77D53CF96B9.html
+
 https://docs.mcafee.com/bundle/enterprise-security-manager-data-sources-configuration-reference-guide/page/GUID-F9142247-0C59-4B66-AC03-237F83318224.html
 
 Set up event forwarding destinations
