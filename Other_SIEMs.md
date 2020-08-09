@@ -1,5 +1,5 @@
 **LEEF:**
-Refer to the QRadar Log Event Extended Format (LEEF) Guide at (https://www.ibm.com/support/knowledgecenter/SS42VS_DSM/b_Leef_format_guide.pdf) for more information.
+Refer to the QRadar Log Event Extended Format (LEEF) Guide at https://www.ibm.com/support/knowledgecenter/SS42VS_DSM/b_Leef_format_guide.pdf for more information.
 https://www.ibm.com/support/knowledgecenter/en/SS42VS_7.3.3/com.ibm.qradar.doc/b_qradar_admin_guide.pdf
 (Adding forwarding destinations )
 
