@@ -15,7 +15,7 @@ https://community.microfocus.com/t5/ArcSight-Connectors/ArcSight-Common-Event-Fo
 
 https://community.microfocus.com/t5/ArcSight-Connectors/ArcSight-Common-Event-Format-CEF-Implementation-Standard/ta-p/1645557?attachment-id=68077
 
-ForwardingCEFSyslogEvents - > choose syslog CEF / Syslog (Common Event Format)
+ForwardingCEFSyslogEvents
 https://community.microfocus.com/t5/ESM-and-ESM-Express-Previous/ArcSight-Forwarding-Connector-Configuration-Guide-7-7-0-8046-0/ta-p/1641717?attachment-id=67071
 
 CEF Extraction Add-on for Splunk
@@ -30,6 +30,9 @@ https://docs.mcafee.com/bundle/enterprise-security-manager-data-sources-configur
 
 Set up event forwarding destinations
 https://docs.mcafee.com/bundle/enterprise-security-manager-10.2.0-product-guide-unmanaged/page/GUID-8AB3A26F-F926-4E00-AE66-ACDD9021852B.html
+
+Forwarding events with Standard Event Format - choose syslog (Standard Event Format) 
+https://docs.mcafee.com/bundle/enterprise-security-manager-10.2.0-product-guide-unmanaged/page/GUID-48297518-8558-4695-8291-E4748F037239.html
 
 
 **4. Syslog:**
