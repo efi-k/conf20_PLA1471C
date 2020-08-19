@@ -1,6 +1,9 @@
 **Links**
 
 
+**Add-on**
+https://docs.splunk.com/Splexicon:Addon
+
 **TA/DA/SA**
 https://dev.splunk.com/enterprise/docs/devtools/enterprisesecurity/abouttheessolution/
 
