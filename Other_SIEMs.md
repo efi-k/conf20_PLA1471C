@@ -5,6 +5,7 @@ Refer to the QRadar Log Event Extended Format (LEEF) Guide at https://www.ibm.co
 https://www.ibm.com/support/knowledgecenter/en/SS42VS_7.3.3/com.ibm.qradar.doc/b_qradar_admin_guide.pdf
 (Adding forwarding destinations )
 
+How to change in QRadar the Event Format to JSON
 https://www.ibm.com/support/knowledgecenter/SS42VS_7.3.3/com.ibm.qradar.doc/t_qradar_adm_add_frwrd_dest.html
 
 
