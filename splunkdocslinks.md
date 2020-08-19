@@ -1,6 +1,9 @@
 **Links**
 
 
+**TA/DA/SA**
+https://dev.splunk.com/enterprise/docs/devtools/enterprisesecurity/abouttheessolution/
+
 **The sequence of search-time operations**
 https://docs.splunk.com/Documentation/Splunk/8.0.5/Knowledge/Searchtimeoperationssequence
 
