@@ -15,3 +15,4 @@ Name='RestrictedAdminMode'>-</Data><Data Name='TargetOutboundUserName'>-</Data><
 Name='TargetLinkedLogonId'>0x0</Data><Data Name='ElevatedToken'>%%1234</Data></EventData></Event>
 
 
+w
