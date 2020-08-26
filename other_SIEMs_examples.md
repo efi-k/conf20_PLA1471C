@@ -48,3 +48,13 @@ Jan 1 08:00:00 192.168.0.1 2000-01-01T08:00:00.0+00:00 1.2.3.4 McAfee_SIEM: 43-2
 - Need to make sure that ESM will pass the keys together with the values (see https://github.com/efi-k/conf20_PLA1471C/blob/master/Other_SIEMs.md)
 
 Jan 1 08:00:00 192.168.0.1 2000-01-01T08:00:00.000+00:00 1.2.3.4 CEF:0|McAfee|ESM|1.2.3|43-263046240|An account was successfully logged on|2|start=1234567890123 end=1234567890123 rt=1234567890123 cnt=1 eventId=123456789 nitroUniqueId=123456789 deviceExternalId=abcdef-ab1 deviceTranslatedAddress=192.168.1.2 externalId=123456789 cat=Host Login nitroNormID=123456789 act=success deviceDirection=0 dst=192.168.1.2 src=192.168.1.1 spt=12345 nitroTrust=2 nitroAppID=kerberos sntdom=abcdef shost=abcdef-ab1.abcdef.local suser=Administrator nitroSecurity_ID=S-1-2-3-1234567890-1234567890-123456789-123 nitroLogon_Type=3 - Network nitroSource_Logon_ID=0x0 nitroDestination_Logon_ID=0x123456789
+
+----------
+**Syslog**
+----------
+
+- The least preferred way
+
+<13>Original Address=192.168.1.1 Jan 01 08:00:00 abcd123 AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=abcd123.abcd.LOCAL User= Domain= EventID=4624 EventIDCode=4624 EventType=8 EventCategory=12345 RecordNumber=12345678 TimeGenerated=1234567890123 TimeWritten=1234567890123 Message=An account was successfully logged on. Subject: Security ID: NULL SID Account Name: - Account Domain: - Logon ID: 0x0 Logon Information: Logon Type: 3 Restricted Admin Mode: - Virtual Account: No Elevated Token: No Impersonation Level: Impersonation New Logon: Security ID: abcd\efgh$ Account Name: abcde$ Account Domain: abcd.local Logon ID: 0xd12345678 Linked Logon ID: 0x0 Network Account Name: - Network Account Domain: - Logon GUID: 12345-1234-abcd-1234-12345678 Process Information: Process ID: 0x0 Process Name: - Network Information: Workstation Name: Source Network Address: 192.168.1.1 Source Port: 12345 Detailed Authentication Information: Logon Process: Kerberos Authentication Package: Kerberos Transited Services: - Package Name (NTLM only): - Key Length: 0 
+
+
