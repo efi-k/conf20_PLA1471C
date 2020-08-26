@@ -25,6 +25,7 @@ DATETIME_CONFIG, MAX_TIMESTAMP_LOOKAHEAD, TIME_FORMAT
 -  Remove description:
 
 Props.conf ->
+
 TRANSFORMS-removedescription = removedesc
 
 TRANSFORMS.conf ->
