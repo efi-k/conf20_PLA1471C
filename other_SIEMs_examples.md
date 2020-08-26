@@ -1,4 +1,6 @@
+------------------------------
 **Windows Event – XML schema**
+------------------------------
 
 - This is what the TA_Win expects (if not directly from a UF)
 
@@ -12,7 +14,9 @@ Name='LogonProcessName'>NtLmSsp </Data><Data Name='AuthenticationPackageName'>NT
 Name='LogonGuid'>{00000000-0000-0000-0000-000000000000}</Data><Data Name='TransmittedServices'>-</Data><Data Name='LmPackageName'>NTLM V1</Data><Data Name='KeyLength'>123</Data><Data Name='ProcessId'>0x0</Data><Data Name='ProcessName'>-</Data><Data Name='IpAddress'>192.168.0.1</Data><Data Name='IpPort'>12345</Data><Data Name='ImpersonationLevel'>%%1234</Data><Data Name='RestrictedAdminMode'>-</Data><Data Name='TargetOutboundUserName'>-</Data><Data Name='TargetOutboundDomainName'>-</Data><Data Name='VirtualAccount'>%%1234</Data><Data Name='TargetLinkedLogonId'>0x0</Data><Data Name='ElevatedToken'>%%1234</Data></EventData></Event>
 ```
 
+------------
 ***Qradar***
+------------
 
 - MUCH easier to work with the JSON format (refer to https://github.com/efi-k/conf20_PLA1471C/blob/master/Other_SIEMs.md about how to switch)
 
@@ -25,7 +29,9 @@ Name='LogonGuid'>{00000000-0000-0000-0000-000000000000}</Data><Data Name='Transm
 {"name":"DefaultProfile","version":"1.0","isoTimeFormat":"yyyy-MM-dd'T'HH:mm:ss.SSSZ","type":"Event","category":"4624","protocolID":"123","sev":"1","src":"192.168.0.1","dst":"192.168.1.2","srcPort":"1234","dstPort":"0","relevance":"1","credibility":"1","startTimeEpoch":"1234567890123","startTimeISO":"2000-01-01T08:00:00.000+00:00","storageTimeEpoch":"1234567890123","storageTimeISO":"2000-01-01T08:00:00.000+00:00","deploymentID":"1234abcd-1234-1234-abcd-123456789012","devTimeEpoch":"1234567890123","devTimeISO":"2000-01-01T08:00:00.000+00:00","srcPreNATPort":"0","dstPreNATPort":"0","srcPostNATPort":"0","dstPostNATPort":"0","hasIdentity":"false","payload":"<13>jan 01 08:00:00 192.168.1.1 AgentDevice=WindowsLog\tAgentLogFile=Security\tSource=Microsoft-Windows-Security-Auditing\tComputer=abcd.abc.local\tUser=\tDomain=\tEventID=4624\tEventIDCode=4624\tEventType=8\tEventCategory=12345\tRecordNumber=123456789\tTimeGenerated=1234567890123\tTimeWritten=1234567890123\tMessage=An account was successfully logged on. Subject: Security ID: S-0-0-0 Account Name: - Account Domain: - Logon ID: 0x0 Logon Type: 3 New Logon: Security ID: S-0-0-12-12345678-12345678-123456789-1234 Account Name: abcdefg$ Account Domain: abc Logon ID: 0xabcd0000 Logon GUID: abcd000-0000-abcd-1234-123456789 Process Information: Process ID: 0x0 Process Name: - Network Information: Workstation Name: Source Network Address: 192.168.1.1 Source Port: 1234 Detailed Authentication Information: Logon Process: Kerberos Authentication Package: Kerberos Transited Services: - Package Name (NTLM only): - Key Length: 0 " ,"eventCnt":"1","hasOffense":"false","domainID":"1","domainName":"AB","eventName":"Success Audit: An account was successfully logged on","lowLevelCategory":"User Login Success","highLevelCategory":"Authentication","eventDescription":"Success Audit: An account was successfully logged on.","logSource":"WindowsAuthServer @ 192.168.1.1","srcNetName":"other","dstNetName":"other","logSourceType":"Microsoft Windows Security Event Log","logSourceGroup":"AB Qradar","logSourceIdentifier":"192.168.1.1","AccountName":"-"}
 
 
+-------------
 **Archsight**
+-------------
 
 - CEF : A header containing product and vendor details, separated by a pipeline followed by key-value pairs. Can be easily extract using the “CEF Extraction Add-on for Splunk” on Splunkbase
 
