@@ -12,11 +12,15 @@ SHOULD_LINEMERGE = true
 MUST_BREAK_AFTER = \”\}
 
 
+
+
 - Check for the time of the event vs the time of the SIEM:
 
 Props.conf:
 
 DATETIME_CONFIG, MAX_TIMESTAMP_LOOKAHEAD, TIME_FORMAT
+
+
 
 -  Remove description:
 
@@ -32,6 +36,8 @@ FORMAT = $1$3
 DEST_KEY = _raw
 
 
+
+
 - Force CEF Events sourcetype:
 
 transforms.conf
@@ -39,6 +45,8 @@ transforms.conf
 REGEX = CEF\:0|McAfee\|ESM\|
 DEST_KEY = Metadata:sourcetype
 FORMAT = sourcetype::cefevents
+
+
 
 
 - Redirect to index
