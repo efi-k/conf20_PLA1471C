@@ -52,8 +52,12 @@ FORMAT = sourcetype::cefevents
 
 - Redirect to index
 
+transforms.conf
+
 [redirect mcafee]
 
 REGEX = deviceExternalId\=Mcafee\sCorrelation\sEngine
+
 DEST_KEY = _Metadata:Index
+
 FORMAT = acmesiem
