@@ -6,7 +6,7 @@
 
 if(isnull(action),"unknown",replace(replace(replace(replace(action,"Notify","NTFY"),"Monitor","MON"),"Block","BL"),",","|"))
 
-"Notify,Block“  =>  NTFY|BL
+"Notify,Block“  =>  NTFY|BL
 
 
 - Cleaning up domain and workgroup from user fields:  acme\\jdoe => jdoe
