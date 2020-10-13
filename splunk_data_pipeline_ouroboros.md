@@ -1,4 +1,5 @@
-How to make splunk heavy-forwarder reiterate over props.conf after changing the sourcetype with a transforms.conf*
+# How to make splunk heavy-forwarder reiterate over props.conf after changing the sourcetype with a transforms.conf
+
 
 Since my .Conf20 session was already recorded, you might want to consider the below as an addendum since it is inline with the session topic and the motivation to spend hours finding a solution stem from the same problem statement: What to do if you have very little or no control over the data source ?
 
