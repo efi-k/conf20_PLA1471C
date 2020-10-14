@@ -26,6 +26,7 @@ The basic ideas is to have those IDS event, after being assigned with the proper
 host=$decideOnStartup
 
 \# This is the input to the original data source
+
 [udp://3000]
 connection_host = none
 index = rawevents
