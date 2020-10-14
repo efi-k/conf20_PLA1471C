@@ -101,7 +101,7 @@ FORMAT = idsevents
 
 DEST_KEY = MetaData:Sourcetype
 
-\# to make sure that the IDS event will be indexed twice (TCP+SYSLOG routing)
+\# to make sure that the IDS event will *NOT* be indexed twice (TCP+SYSLOG routing)
 
 [send_to_null_tcp]
 
