@@ -25,7 +25,6 @@ The basic ideas is to have those IDS event, after being assigned with the proper
 [default]
 host=$decideOnStartup
 
-
 \# This is the input to the original data source
 [udp://3000]
 connection_host = none
@@ -33,7 +32,7 @@ index = rawevents
 sourcetype = mixedevents
 disabled = false
 
-# This is the port created for the loopback
+\# This is the port created for the loopback
 [udp://3100]
 connection_host = none
 index = rawevents
@@ -42,9 +41,9 @@ disabled = false
 
 
 
-props.conf
+# props.conf
 
-# Just like sourcetype name implies...
+\# Just like sourcetype name implies...
 [mixedevents]
 DATETIME_CONFIG = 
 TIME_PREFIX = (Security\s+\d+|N\/A\s+\d+)
@@ -54,14 +53,14 @@ TRANSFORMS-set_ids_sourcetype = set_ids
 TRANSFORMS-ids_to_null_tcp = send_to_null_tcp
 TRANSFORMS-ids_to_syslog = send_to_syslog
 
-# This stanza will work only for the second iteration
+\# This stanza will work only for the second iteration
 [idsevents]
 DATETIME_CONFIG = 
 TIME_PREFIX = \srt\=
 MAX_TIMESTAMP_LOOKAHEAD = 30
 TZ = UTC
 
-transforms.conf
+# transforms.conf
 
 [send_rawevents]
 REGEX = ^((?!CEF\:0\|ids).)*$
@@ -74,7 +73,7 @@ REGEX = CEF\:0\|ids
 FORMAT = idsevents
 DEST_KEY = MetaData:Sourcetype
 
-# to make sure that the IDS event will be indexed twice (TCP+SYSLOG routing)
+\# to make sure that the IDS event will be indexed twice (TCP+SYSLOG routing)
 [send_to_null_tcp]
 REGEX = CEF\:0\|ids
 DEST_KEY = _TCP_ROUTING
@@ -86,7 +85,7 @@ REGEX = CEF\:0\|ids
 DEST_KEY = _SYSLOG_ROUTING
 FORMAT = syslog_group
 
-outptus.conf
+# outptus.conf
 
 [syslog:syslog_group]
 server = this_HF:3100
