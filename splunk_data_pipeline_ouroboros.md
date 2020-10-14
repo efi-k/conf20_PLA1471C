@@ -34,6 +34,7 @@ sourcetype = mixedevents
 disabled = false
 
 \# This is the port created for the loopback
+
 [udp://3100]
 connection_host = none
 index = rawevents
@@ -45,6 +46,7 @@ disabled = false
 # props.conf
 
 \# Just like sourcetype name implies...
+
 [mixedevents]
 DATETIME_CONFIG = 
 TIME_PREFIX = (Security\s+\d+|N\/A\s+\d+)
@@ -55,6 +57,7 @@ TRANSFORMS-ids_to_null_tcp = send_to_null_tcp
 TRANSFORMS-ids_to_syslog = send_to_syslog
 
 \# This stanza will work only for the second iteration
+
 [idsevents]
 DATETIME_CONFIG = 
 TIME_PREFIX = \srt\=
@@ -75,6 +78,7 @@ FORMAT = idsevents
 DEST_KEY = MetaData:Sourcetype
 
 \# to make sure that the IDS event will be indexed twice (TCP+SYSLOG routing)
+
 [send_to_null_tcp]
 REGEX = CEF\:0\|ids
 DEST_KEY = _TCP_ROUTING
