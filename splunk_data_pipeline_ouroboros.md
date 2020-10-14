@@ -19,20 +19,14 @@ So here is the solution I've found to create a loopback that will make the IDS e
 
 The basic ideas is to have those IDS event, after being assigned with the proper sourcetype, go through the syslog routing where the server is... the forwarder itself,listening on another port. Then the IDS sourcetype stanza in the props.conf will do its thing and problem solved !
 
-I hope this tip was helpful and obviously feel free to drop any question in the comments.
 
-Take care and stay safe !
-
-No alt text provided for this image
-
-
-inputs.conf
+# inputs.conf
 
 [default]
 host=$decideOnStartup
 
 
-# This is the input to the original data source
+\# This is the input to the original data source
 [udp://3000]
 connection_host = none
 index = rawevents
